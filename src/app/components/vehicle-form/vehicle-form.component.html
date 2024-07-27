@@ -1,0 +1,26 @@
+<div class="form-container">
+  <h1>Formulario de Vehículo</h1>
+  <form (ngSubmit)="saveVehicle()" class="vehicle-form">
+    <div class="form-group">
+      <label for="make">Marca</label>
+      <input id="make" [(ngModel)]="vehicle.make" name="make" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="model">Modelo</label>
+      <input id="model" [(ngModel)]="vehicle.model" name="model" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="year">Año</label>
+      <input id="year" [(ngModel)]="vehicle.year" name="year" required type="number" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="vin">VIN</label>
+      <input id="vin" [(ngModel)]="vehicle.vin" name="vin" required class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<div class="details-container">
+    <h1>Detalles del Vehículo</h1>
+    <div *ngIf="vehicle">
+      <p><strong>Marca:</strong> {{ vehicle.make }}</p>
+      <p><strong>Modelo:</strong> {{ vehicle.model }}</p>
+      <p><strong>Año:</strong> {{ vehicle.year }}</p>
+      <p><strong>VIN:</strong> {{ vehicle.vin }}</p>
+    </div>
+  </div>
+  

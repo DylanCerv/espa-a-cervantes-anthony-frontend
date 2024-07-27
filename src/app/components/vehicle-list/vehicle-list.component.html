@@ -1,0 +1,33 @@
+<div class="list-container">
+  <h1 class="title">Lista de Vehículos</h1>
+  <button (click)="navigateToAdd()" class="btn btn-success add-btn">Agregar Vehículo</button>
+  
+  <div *ngIf="vehicles.length === 0" class="empty-message">
+    No hay vehículos registrados.
+  </div>
+  
+  <table class="vehicle-table" *ngIf="vehicles.length > 0">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>VIN</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <td>{{ vehicle.make }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>{{ vehicle.year }}</td>
+        <td>{{ vehicle.vin }}</td>
+        <td class="action-buttons">
+          <button (click)="deleteVehicle(vehicle._id)" class="btn btn-danger">Eliminar</button>
+          <button (click)="navigateToUpdate(vehicle._id)" class="btn btn-secondary">Actualizar</button>
+          <button (click)="navigateToDetails(vehicle._id)" class="btn btn-info">Detalles</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
